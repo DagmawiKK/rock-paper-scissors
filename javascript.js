@@ -1,6 +1,6 @@
 function getComputerChoice() {
     let choice = ["rock", "paper", "scissors"];
-    console.log(choice[Math.ceil(Math.random() * (3)) -1])
+    prompt(choice[Math.ceil(Math.random() * (3)) -1])
 
     return choice[Math.ceil(Math.random() * (3)) -1];
 }
@@ -49,11 +49,11 @@ function playGame() {
     } 
 
     if (humanScore > computerScore) {
-        console.log("The human won with value: " + humanScore);
+        prompt("The human won with value: " + humanScore);
         return; 
     }
     else {
-        console.log("The computer won with value: " + computerScore);
+        prompt("The computer won with value: " + computerScore);
         return;
     }
 }
