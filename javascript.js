@@ -1,7 +1,5 @@
 function getComputerChoice() {
     let choice = ["rock", "paper", "scissors"];
-    prompt(choice[Math.ceil(Math.random() * (3)) -1])
-
     return choice[Math.ceil(Math.random() * (3)) -1];
 }
 
@@ -43,6 +41,7 @@ function playGame() {
 
     while (i > 0) {
         let computerChoice = getComputerChoice();
+        prompt(computerChoice)
         let humanChoice = getHumanChoice();
         playRound(computerChoice, humanChoice);
         i--;
