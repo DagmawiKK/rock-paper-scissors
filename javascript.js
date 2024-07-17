@@ -41,18 +41,19 @@ function playGame() {
 
     while (i > 0) {
         let computerChoice = getComputerChoice();
-        prompt(computerChoice)
+        
         let humanChoice = getHumanChoice();
+        alert("computer played: " + computerChoice)
         playRound(computerChoice, humanChoice);
         i--;
     } 
 
     if (humanScore > computerScore) {
-        prompt("The human won with value: " + humanScore);
+        alert("The human won with value: " + humanScore);
         return; 
     }
     else {
-        prompt("The computer won with value: " + computerScore);
+        alert("The computer won with value: " + computerScore);
         return;
     }
 }
