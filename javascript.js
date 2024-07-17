@@ -3,3 +3,9 @@ function getComputerChoice() {
     return choice[Math.ceil(Math.random() * (3)) -1];
 }
 console.log(getComputerChoice())
+
+function getHumanChoice() {
+    let HumanChoice = prompt("Input your choice");
+    return HumanChoice;
+}
+
