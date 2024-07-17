@@ -43,7 +43,11 @@ function playGame() {
         let computerChoice = getComputerChoice();
         
         let humanChoice = getHumanChoice();
-        alert("computer played: " + computerChoice)
+        alert("------Current score------");
+        alert("Computer: " + computerScore);
+        alert("Human: " + humanScore );
+        alert("computer played: " + computerChoice);
+
         playRound(computerChoice, humanChoice);
         i--;
     } 
