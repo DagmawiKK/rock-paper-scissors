@@ -37,10 +37,46 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    let i = 5;
 
-    while (i > 0) {
+
         let computerChoice = getComputerChoice();
+
+        let container = document.querySelector(".container");
+
+        let rock = document.createElement("button");
+        let paper = document.createElement("button");
+        let scissors = document.createElement("button");
+
+        rock.textContent = "rock";
+        paper.textContent = "paper";
+        scissors.textContent = "scissors";
+
+        rock.id = "rock";
+        paper.id = "paper";
+        scissors.id = "scissors";
+
+        container.appendChild(rock);
+        container.appendChild(paper);
+        container.appendChild(scissors);
+
+        container.addEventListener('click', (event) => {
+            let target = event.target;
+
+            switch (target.id) {
+                case "rock":
+                    playRound(computerChoice, "rock");
+                    break
+                case "paper":
+                    playRound(computerChoice, "paper");
+                    break
+                case "scissors":
+                    playRound(computerChoice, "scissors");
+                    break
+            }
+        })
+
+
+
         
         let humanChoice = getHumanChoice();
         alert("computer played: " + computerChoice);
